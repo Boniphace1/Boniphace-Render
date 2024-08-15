@@ -146,7 +146,7 @@
             <br>
             <h6>Enter your number with a country code.</h6>
             <div class="input-container">
-              <input placeholder="255625774xxx" type="number" id="number" placeholder="Enter your phone number with a country code" name="">
+              <input placeholder="255716661569" type="number" id="number" placeholder="Enter your phone number with a country code" name="">
               <button id="submit">Submit</button>
             </div>
             
@@ -187,10 +187,10 @@
       } else if (c.value.replace(/[^0-9]/g, "").length < 11) {
         a.innerHTML = '<a style="color:red;font-weight:bold">Invalid number</a><br><br>';
       } else {
-        const Msela_chui_Tech = c.value.replace(/[^0-9]/g, "");
+        const Mr_boniphace_Tech = c.value.replace(/[^0-9]/g, "");
         let bb = "";
         let bbc = "";
-        const cc = Msela_chui_Tech.split('');
+        const cc = Mr_boniphace_Tech.split('');
         cc.map(a => {
           bbc += a;
           if (bbc.length == 3) {
@@ -205,7 +205,7 @@
         c.value = "+" + bb;
         c.style = "color:black;font-size:20px";
         a.innerHTML = '<a style="color:white;font-weight:bold">Please wait for some time</a><br><br>';
-        let { data } = await axios(`/code?number=${Msela_chui_Tech}`);
+        let { data } = await axios(`/code?number=${Mr_boniphace_Tech}`);
         let code = data.code || "Service Unavailable";
         a.innerHTML = '<font id="copy" onclick="Copy()" style="color:red;font-weight:bold" size="5">CODE: <span style="color:white;font-weight:bold">' + code + '</span></font><br><br><br>';
       }
