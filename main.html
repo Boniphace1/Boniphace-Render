@@ -1,9 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>BONIPHACE-MD BONIPHACE TECH</title>
+  <title>Session Generator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
   <style>
     body {
       display: flex;
@@ -12,15 +17,15 @@
       justify-content: center;
       height: 100vh;
       margin: 0;
-      background-color: darkgreen
-    } 
+      background-color: black;
+    }
 
     .btn {
       --color: #e5f5f1;
       --color2: rgb(0, 0, 0);
       width: 200px;
       padding: 0.8em 1.75em;
-      background-color: darkred;
+      background-color: transparent;
       border-radius: 6px;
       border: .3px solid var(--color);
       transition: .5s;
@@ -72,22 +77,136 @@
       filter: brightness(.7);
       transform: scale(.98);
     }
+    .story {
+      margin: 20px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .audio-controls {
+      margin-top: 20px;
+    }
+
+    .hacker-button {
+      background-color: #FFFF33;
+      color: #6633FF;
+      border: 2px solid #3300FF;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .hacker-button:hover {
+      background-color: #f00;
+      color: #FF33FF;
+    }
+
+    .contact-details {
+      margin-top: 20px;
+      color: #990099;
+    }
+
+    .copyright {
+      margin-top: 20px;
+      color: #FFFF00;
+    }
+    .news-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-family: "Roboto", sans-serif;
+    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.3);
+}
+
+.news-container .title {
+    position: absolute;
+    background: #df2020;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    color: white;
+    font-weight: bold;
+    z-index: 200;
+}
+
+.news-container ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    animation: scroll 25s infinite linear;
+}
+
+.news-container ul li {
+    white-space: nowrap;
+    padding: 10px 24px;
+    color: #494949;
+    position: relative;
+}
+
+.news-container ul li::after {
+    content:"";
+    width: 1px;
+    height: 100%;
+    background: #b8b8b8;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.news-container ul li:last-child::after {
+    display: none;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-1083px);
+
+    }
+}
   </style>
 </head>
 <body>
-<body><marquee style="color:white;background-color:royal;height:75px;">
- Hello 👋 Guys welcome to   BONIPHACE-MD SITE🍀</marquee>
+
+      <div class="news-container">
+        <div class="title">
+            𝐡𝐞𝐥𝐥𝐨 𝐮𝐬𝐞𝐫
+        </div>
+
+        <ul>
+            <li>
+                welcome to BONIPHACE-MD official!
+            </li>
+            
+            <li>
+              this is a session id generator which can help you to generate session id for
+            </li>
+
+            <li>
+                bots like MSELA CHUI MD, VENOCYBER MD, LAZACK MD and others being developed by Venocybertech!
+            </li>
+        </ul>
+    </div>
+
+  <center>
   <button onclick="window.open(`/qr`)" class="btn">qr code</button>
   <button onclick="window.open(`/pair`)" class="btn">pair code</button>
-  <button onclick="window.open(`https://dashboard.heroku.com/new?template=https://github.com/boniphace478/BONIPHACE-MD/tree/main`)" class="btn">Deploy</button>
-  <button onclick="window.open(`https://wa.me/255716661569`)" class="btn">Developer 1</button>
-  <button onclick="window.open(`https://wa.me/255716661569`)" class="btn">Developer 2</button>
-  <button onclick="window.open(`https://wa.me/255716661569`)" class="btn">Developer 3</button>
-  <button onclick="window.open(`https://whatsapp.com/channel/0029VaiMm7d4yltT51HS1T1G`)" class="btn">Wa Group</button>
-  <button onclick="window.open(`https://youtube.com/@anthonyboniphace?si=qtXPidQlCe4NkYU8`)" class="btn">YouTube</button>
-  <button onclick="window.open(`https://www.tiktok.com/@boniphacemaregesi?_t=8oBg0dpaDuI&_r=1`)" class="btn" >TikTok</button>
-  <button onclick="window.open(`https://t.me/boniphaceTech`)" class="btn">Telegram</button>
+  <button onclick="window.open(`https://github.com/boniphace478/BONIPHACE-MD`)" class="btn">github</button>
+  <button onclick="window.open(`https://github.com/kingjux/`)" class="btn">follow developer</button>
+  </center>
 
-
-</body>
+  <div class="copyright">
+    <center>
+    <p>&copy; BONIPHACE-MD OFFICIAL 2024</p>
+    <p>designed by <b>official venocyber inc</b></p>
+    </center>
+    
+  </div>
 </html>
