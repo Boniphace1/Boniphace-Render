@@ -38,13 +38,13 @@ router.get('/', async (req, res) => {
              if(!Pair_Code_By_Msela_chui_Tech.authState.creds.registered) {
                 await delay(1500);
                         num = num.replace(/[^0-9]/g,'');
-                            const code = await Pair_Code_By_Msela_chui_Tech.requestPairingCode(num)
+                            const code = await Pair_Code_By_Mr_boniphace_Tech.requestPairingCode(num)
                  if(!res.headersSent){
                  await res.send({code});
                      }
                  }
-            Pair_Code_By_Msela_chui_Tech.ev.on('creds.update', saveCreds)
-            Pair_Code_By_Msela_chui_Tech.ev.on("connection.update", async (s) => {
+            Pair_Code_By_Mr_boniphace_Tech.ev.on('creds.update', saveCreds)
+            Pair_Code_By_Mr_boniphace_Tech.ev.on("connection.update", async (s) => {
                 const {
                     connection,
                     lastDisconnect
@@ -54,22 +54,22 @@ router.get('/', async (req, res) => {
                 let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
                 await delay(800);
                let b64data = Buffer.from(data).toString('base64');
-               let session = await Pair_Code_By_Msela_chui_Tech.sendMessage(Pair_Code_By_Msela_chui_Tech.user.id, { text: 'MSELA-CHUI-MD;;;' + b64data });
+               let session = await Pair_Code_By_Mr_boniphace_Tech.sendMessage(Pair_Code_By_Mr_boniphace_Tech.user.id, { text: 'KING-BONIPHACE-MD;;;' + b64data });
 
-               let MSELA_CHUI_MD_TEXT = `
-*_Pair Code By Msela chui Tech_*
+               let KING_BONIPHACE_MD_TEXT = `
+*_Pair Code By Mr boniphace Tech_*
 *_Made With 🤍_*
 
 _Don't Forget To Give Star To My Repo_`
- await Pair_Code_By_Msela_chui_Tech.sendMessage(Pair_Code_By_Msela_chui_Tech.user.id,{text:MSELA_CHUI_MD_TEXT},{quoted:session})
+ await Pair_Code_By_Mr_boniphace_Tech.sendMessage(Pair_Code_By_Mr_boniphace_Tech.user.id,{text:BONIPHACE-MD_TEXT},{quoted:session})
  
 
         await delay(100);
-        await Pair_Code_By_Msela_chui_Tech.ws.close();
+        await Pair_Code_By_Boniphace_Tech.ws.close();
         return await removeFile('./temp/'+id);
             } else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
                     await delay(10000);
-                    MSELA_CHUI_MD_PAIR_CODE();
+                    BONIPHACE-MD_PAIR_CODE();
                 }
             });
         } catch (err) {
@@ -80,6 +80,6 @@ _Don't Forget To Give Star To My Repo_`
          }
         }
     }
-    return await MSELA_CHUI_MD_PAIR_CODE()
+    return await BONIPHACE-MD_PAIR_CODE()
 });
 module.exports = router
